@@ -1,0 +1,13 @@
+Phase:	DDW_HW1
+Input:  Token
+Options: control = appelt
+
+Rule: Nouns
+(
+  {Token.category==NN, Token.kind==word} | 
+  {Token.category==NP, Token.kind==word} | 
+  {Token.category==NNP, Token.kind==word} 
+)
+:entityString
+-->
+:entityString.Nouns = {name="nouns"}
